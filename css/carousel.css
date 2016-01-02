@@ -1,0 +1,92 @@
+.carousel  
+{
+  margin-bottom: 35px;
+}
+
+.carousel .carousel-inner 
+{
+  margin-top: 20px;
+  margin-bottom:35px;
+}
+
+#index-slider {
+  background-image: url(../img/core/slider-hope.jpg);
+  filter:"progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale')";  
+  -moz-background-size:100% 100%; 
+  background-size:100% 100%;
+}
+
+/*#index-slider>.carousel-inner .item */
+
+.slider-pic img{
+  max-height: 300px;
+  max-width: 100%;
+
+  min-height: 300px;
+  margin: 0 auto;
+}
+
+.vertical-align {
+/*  display: flex;
+  flex-direction: row;*/
+}
+
+.vertical-align [class^="col-"],
+.vertical-align [class*="col-"] {
+  display: inline-block;
+  float: none;
+  vertical-align: middle;
+}
+
+.slider-caption{
+  text-transform: none;
+  background: #a1a1a1;
+  background: rgba(0, 0, 0, 0.3);
+  -webkit-transition-duration: 0.5s;
+  -moz-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  padding: 10px;
+  max-height: 300px;
+  max-width: 100%;
+
+  min-height: 100px;
+  min-width: 100%;
+  overflow: hidden;
+}
+
+.slider-caption .title{
+  font-size: 22px;
+  height: 70px;
+  display: inline-block;
+  overflow: hidden;
+}
+
+.slider-caption .subtitle{
+  font-size: 16px;
+}
+
+.slider-caption .title,
+.slider-caption .subtitle
+{
+  color: #FFF;
+  text-shadow: 2px 2px 3px #444;
+  line-height: 1.8em;
+}
+
+.carousel-indicators{
+  bottom: 0px;
+}
+
+.img-shadow {
+    border:5px solid #FFF;
+    border-radius:5px;
+    -moz-border-radius:5px;
+    -moz-box-shadow: 2px 3px 4px #444;
+    -webkit-box-shadow: 2px 3px 4px #444;
+    box-shadow: 2px 3px 4px #444;
+    /* For IE 8 */
+    -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#444)";
+    /* For IE 5.5 - 7 */
+    filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#444');
+}
