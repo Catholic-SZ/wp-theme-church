@@ -26,9 +26,9 @@
       <div class="navbar-inner">
         <div class="container">
           
-          <div class="navbar-search-header">
+<!--           <div class="navbar-search-header">
             <i class="icon-search" data-toggle="collapse" data-target="#navbar-search-collapse-1"></i>
-          </div>
+          </div> -->
 
           <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-navbar-collapse-1">
@@ -64,7 +64,7 @@
           </div>
         </div>
 
-        <div class="container">
+<!--         <div class="container">
           <div class="navbar-search" id="navbar-search-collapse-1">
             <form class="navbar-form navbar-right" role="search">
               <div class="input-group">
@@ -75,7 +75,7 @@
               </div>
             </form>
           </div>
-        </div>
+        </div> -->
 
       </div>
     </nav>

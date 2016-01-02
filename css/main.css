@@ -100,25 +100,13 @@ a:active {
   margin-left: 15px;
 }
 
-div.navbar-search-header{
-  float: right!important;
-  height: 50px;
-  line-height: 50px;
-  overflow: hidden;
-}
-
-.icon-search{
-  cursor: pointer;
-}
-
 .navbar-brand img{
   max-height: 100px;
   margin: auto;
   overflow: hidden;
 }
 
-.navbar-nav>li, 
-div.navbar-search-header 
+.navbar-collapse .navbar-form
 {
   margin-top: 25px;
   margin-bottom: 25px;
@@ -129,8 +117,7 @@ div.navbar-search-header
   max-height: 50px;
 }
 
-.navbar-fixed-top .navbar-nav>li,
-.navbar-fixed-top div.navbar-search-header
+.navbar-fixed-top .navbar-collapse .navbar-form
 {
   margin-top: 0px;
   margin-bottom: 0px;
@@ -138,18 +125,6 @@ div.navbar-search-header
 
 .navbar-brand{
   padding:0;
-}
-
-.navbar-search{
-  display: none;
-  /*position: absolute;*/
-  background: #ffffff;
-  /*padding:10px 15px;*/
-  z-index: 100;
-}
-
-.navbar-search.in {
-  display: block;
 }
 
 .navbar-default .navbar-nav>li>a:focus, 
@@ -177,8 +152,6 @@ div.navbar-search-header
   color: #FFF;
   background: #46a546;
 }
-
-
 
 .main-panel div.lesson {
   text-align: center;
@@ -670,8 +643,7 @@ section
     max-height: 50px;
   }
 
-  .navbar-nav>li,
-  div.navbar-search-header
+  ..navbar-collapse .navbar-form
   {
     margin-top: 0px;
     margin-bottom: 0px;
