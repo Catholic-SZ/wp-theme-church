@@ -12,7 +12,7 @@
             <div class="col-xs-12 col-md-8">
                 <div class="widget-container widget-news boxed boxed-border">
                     <div class="widget-title">
-                        <h4><i class="icon-list"></i>普世教会</h4>
+                        <h4><i class="icon-list"></i><?php single_cat_title(); ?></h4>
                     </div>
                     <div class="widget-content">
 

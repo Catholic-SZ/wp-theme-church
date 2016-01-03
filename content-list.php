@@ -4,9 +4,7 @@
 
         <li class="media">
             <div class="media-left">
-              <a href="img/extend/OSSROM86646_Articolo.jpg" data-lightbox="main-pic" data-title="教宗清晨弥撒：贪恋钱财的神父和主教使我感到难过">
-                <img class="media-object" src="img/extend/OSSROM86646_Articolo.jpg" alt="...">
-              </a>
+                <?php the_post_thumbnail( array(100, 100) ); ?>
             </div>
             <div class="media-body">
               <span class="media-heading"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></span>

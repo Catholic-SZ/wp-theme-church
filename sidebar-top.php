@@ -1,12 +1,10 @@
 ﻿
-<div class="banner inner">
-    <div class="banner-shadow"></div>
-    <img src="<?php bloginfo('template_url'); ?>/images/banner-products.jpg" alt="手机电话">
-</div>
-
-<div class="breadcrumb inner">
-
-    <?php if (function_exists('dimox_breadcrumbs')) dimox_breadcrumbs(); ?>
-    
-    <div class="weibo-box">关注我们：<div class="wb-follow-button"></div></div>
-</div>
+    <section>
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12">
+            <?php if (function_exists('dimox_breadcrumbs')) dimox_breadcrumbs(); ?>
+          </div>
+        </div>
+      </div>
+    </section>

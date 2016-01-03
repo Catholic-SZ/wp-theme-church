@@ -76,6 +76,13 @@
             }
         } 
     }
+
+    add_theme_support('post-thumbnails');
+
+    // set_post_thumbnail_size( 100, 100, true ); // 305 pixels wide by 380 pixels tall, set last parameter to true for hard crop mode 
+    // add_image_size( 'one', 155, 110, true ); // Set thumbnail size 
+    // add_image_size( 'two', 350, 248, true ); // Set thumbnail size 
+    // add_image_size( 'big', 546, 387, true ); // Set thumbnail size 
         
     function catch_the_image( $id ) {
         
@@ -107,21 +114,23 @@
         return $old_help;
     }
     add_filter('contextual_help', 'Uazoh_remove_help_tabs', 10, 3 );
-    
+            
+
     function dimox_breadcrumbs() {
  
-        $delimiter = '<i>&nbsp;</i>';
+        // $delimiter = '<i>&nbsp;</i>';
+        $delimiter = '';
         $name = '首页'; //text for the 'Home' link
-        $currentBefore = '<span>';
-        $currentAfter = '</span>';
+        $currentBefore = '<li class="active">';
+        $currentAfter = '</li>';
  
         if ( !is_home() && !is_front_page() || is_paged() ) {
  
-            echo '<div class="crumb-box">';
+            echo '<ol class="breadcrumb">';
  
             global $post;
             $home = get_bloginfo('url');
-            echo '<a id="hp" href="' . $home . '">' . $name . '</a>' . $delimiter;
+            echo '<li><span class="glyphicon glyphicon-home" aria-hidden="true"></span><a href="' . $home . '">' . $name . '</a></li>' . $delimiter;
  
             if ( is_category() ) {
                 global $wp_query;
@@ -135,12 +144,12 @@
                 echo $currentAfter;
          
             } elseif ( is_day() ) {
-                echo '<a href="' . get_year_link(get_the_time('Y')) . '">' . get_the_time('Y') . '</a> ' . $delimiter;
-                echo '<a href="' . get_month_link(get_the_time('Y'),get_the_time('m')) . '">' . get_the_time('F') . '</a> ' . $delimiter;
+                echo '<li><a href="' . get_year_link(get_the_time('Y')) . '">' . get_the_time('Y') . '</a></li> ' . $delimiter;
+                echo '<li><a href="' . get_month_link(get_the_time('Y'),get_the_time('m')) . '">' . get_the_time('F') . '</a></li> ' . $delimiter;
                 echo $currentBefore . get_the_time('d') . $currentAfter;
          
             } elseif ( is_month() ) {
-                echo '<a href="' . get_year_link(get_the_time('Y')) . '">' . get_the_time('Y') . '</a> ' . $delimiter;
+                echo '<li><a href="' . get_year_link(get_the_time('Y')) . '">' . get_the_time('Y') . '</a></li> ' . $delimiter;
                 echo $currentBefore . get_the_time('F') . $currentAfter;
          
             } elseif ( is_year() ) {
@@ -163,7 +172,7 @@
                 $breadcrumbs = array();
                 while ($parent_id) {
                 $page = get_page($parent_id);
-                $breadcrumbs[] = '<a href="' . get_permalink($page->ID) . '">' . get_the_title($page->ID) . '</a>';
+                $breadcrumbs[] = '<li><a href="' . get_permalink($page->ID) . '">' . get_the_title($page->ID) . '</a></li>';
                 $parent_id  = $page->post_parent;
             }
                 $breadcrumbs = array_reverse($breadcrumbs);
@@ -197,7 +206,7 @@
             }
             */
          
-            echo '</div>';
+            echo '</ol>';
         }
     }
     

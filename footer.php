@@ -99,8 +99,6 @@
     <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/bootstrap-hover-dropdown.min.js"></script>
-    <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/lightbox.min.js"></script>
     <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/common.js"></script>
   </body>
 </html>
