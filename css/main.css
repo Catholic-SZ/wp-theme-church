@@ -778,7 +778,7 @@ footer {
 
 .widget-news .widget-content .media-left img 
 {
-  height: 65px;
+  display: block;
 }
 
 .widget-news .widget-content .media-heading
@@ -834,7 +834,7 @@ a.btn-tag:hover,
   transition: all 0.2s ease;
 }
 
-.widget-content img {
+.widget-article .widget-content img {
   margin-bottom: 15px;
   max-width: 100%;
   height: auto;
