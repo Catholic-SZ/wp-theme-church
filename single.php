@@ -17,7 +17,7 @@
                   <?php if(have_posts()) : ?><?php while(have_posts()) : the_post(); ?>
                     
                     <h3 class="text-center"><?php the_title(); ?></h3>
-                    <span class="subtitle"><?php the_time('Y年n月j日'); ?> | <?php the_author(); ?> | <?php the_category(',');?> </span>
+                    <span class="subtitle"><?php the_time('Y年n月j日'); ?> | <?php the_author(); ?> | <?php the_category(',');?> | <?php if(function_exists('the_views')) { the_views(); } ?> </span>
 
                     <hr class="featurette-divider">
                     <div class="widget-content"> 

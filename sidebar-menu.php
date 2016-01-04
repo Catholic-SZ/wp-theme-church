@@ -37,7 +37,7 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="<?php get_bloginfo('url'); ?>">
+            <a class="navbar-brand" href="<?php bloginfo('url'); ?>">
               <img src="<?php bloginfo('template_url'); ?>/img/logo.png" class="img-responsive" alt="天主教深圳圣安多尼堂"/>
             </a>
           </div>

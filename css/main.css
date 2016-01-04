@@ -834,8 +834,20 @@ a.btn-tag:hover,
   transition: all 0.2s ease;
 }
 
+/*.pic-box img{
+  height: 230px;
+  width: 340px;
+}*/
+
 .widget-article .widget-content img {
   margin-bottom: 15px;
   max-width: 100%;
   height: auto;
+}
+
+.media .media-body .media-meta {
+  position: relative;
+  bottom: 14px;
+  color: #999;
+  left: 240px;
 }
