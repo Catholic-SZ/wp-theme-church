@@ -17,14 +17,12 @@
                   <?php if(have_posts()) : ?><?php while(have_posts()) : the_post(); ?>
                     
                     <h3 class="text-center"><?php the_title(); ?></h3>
-                    <span class="subtitle">06/11/2015 19:08 梵蒂冈广播电台</span>
+                    <span class="subtitle"><?php the_time('Y年n月j日'); ?> | <?php the_author(); ?> | <?php the_category(',');?> </span>
 
                     <hr class="featurette-divider">
                     <div class="widget-content"> 
                       <?php the_content(); ?>
                     </div>
-
-                    
 
                     <div class="widget-container widget-tags boxed">
                       <ul class="widget-content">
@@ -37,6 +35,8 @@
 
                   </div>
                 </article>
+                上一篇：<?php previous_post_link(); ?><br/>
+                下一篇：<?php next_post_link(); ?>
               </div>
               <!--/ content -->
 
