@@ -13,10 +13,11 @@
                  <?php echo mb_strimwidth(strip_tags(apply_filters('the_content', $post->post_content)), 0, 200,"···");  ?>
               </span>
               <span class="media-meta">
-                <span><?php the_time('Y-m-d') ?></span>
-                <span><?php if(function_exists('the_views')) { the_views(); } ?></span>
-                <span></span>
+                <span><i class="icon-calendar"></i> <?php the_time('Y-m-d') ?></span>
+                <span><i class="icon-eye-open"></i> <?php if(function_exists('the_views')) { the_views(); } ?></span>
+                <span><i class="icon-comments"></i> 2,678</span>
               </span>
+              <a class="btn btn-default btn-sm hidden-xs" href="<?php the_permalink() ?>" role="button">阅读更多</a>
             </div>
         </li>
 
