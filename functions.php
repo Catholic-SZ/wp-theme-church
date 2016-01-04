@@ -138,7 +138,10 @@
                 $thisCat = $cat_obj->term_id;
                 $thisCat = get_category($thisCat);
                 $parentCat = get_category($thisCat->parent);
-                if ($thisCat->parent != 0) echo(get_category_parents($parentCat, TRUE, $delimiter));
+                if ($thisCat->parent != 0) {
+                    echo '<li>'.(get_category_parents($parentCat, TRUE, '</li>'));
+                }
+
                 echo $currentBefore;
                 single_cat_title();
                 echo $currentAfter;
@@ -156,8 +159,10 @@
                 echo $currentBefore . get_the_time('Y') . $currentAfter;
          
             } elseif ( is_single() ) {
-                $cat = get_the_category(); $cat = $cat[0];
-                echo get_category_parents($cat, TRUE, $delimiter);
+                $cat = get_the_category(); 
+                $cat = $cat[0];
+                echo '<li>'.get_category_parents($cat, TRUE, '</li><li>');
+                // echo '<li><a href="'.get_category_link( $cat ).'">'.$cat->name.'</a></li>' . $delimiter;
                 echo $currentBefore;
                 the_title();
                 echo $currentAfter;
