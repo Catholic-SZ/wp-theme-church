@@ -78,7 +78,7 @@
 
         <div class="row">
           <div class="col-xs-12">
-            <p class="w3-link">Copyright © 2015 Catholic Assist. All Rights Reserved. </p>
+            <p class="w3-link">Copyright © 2015 Catholic Assist. All Rights Reserved. 载入时间:<?php echo get_num_queries(); ?> 毫秒</p>
           </div>
         </div>
       </div>
