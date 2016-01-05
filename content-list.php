@@ -4,7 +4,10 @@
 
         <li class="media">
             <div class="media-left">
-                <?php the_post_thumbnail( array(200, 150) ); ?>
+              <a href="<?php the_permalink() ?>">
+                <?php the_post_thumbnail( array(200, 120) ); ?>
+              </a>
+                
             </div>
             <div class="media-body">
               <span class="media-heading"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></span>

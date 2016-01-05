@@ -845,12 +845,13 @@ a.btn-tag:hover,
   width: 200px;
   height: 120px;
   overflow: hidden;
+  text-align: center;
 }
 
-.media .media-left img 
+/*.media .media-left img 
 {
   width: 100%;
-}
+}*/
 
 .media .media-body {
   position: relative;
