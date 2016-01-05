@@ -632,6 +632,8 @@ section
     margin:0 auto;
     padding:0;
     overflow: hidden;
+    height: 300px;
+    width: 100%;
 }
 
 @media (max-width: 768px) { 
@@ -830,7 +832,7 @@ a.btn-tag:hover,
 }
 
 .pic-box img{
-  height: 100%;
+  height: auto;
   width: 100%;
 }
 
@@ -848,10 +850,11 @@ a.btn-tag:hover,
   text-align: center;
 }
 
-/*.media .media-left img 
+.media .media-left img 
 {
   width: 100%;
-}*/
+  height: auto;
+}
 
 .media .media-body {
   position: relative;
