@@ -13,7 +13,7 @@
               <span class="media-heading"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></span>
               <span class="media-summary hidden-xs">
                  <!-- the_excerpt()  -->
-                 <?php echo mb_strimwidth(strip_tags(apply_filters('the_content', $post->post_content)), 0, 200,"···");  ?>
+                 <?php echo mb_strimwidth(strip_tags(apply_filters('the_content', $post->post_content)), 0, 140,"···");  ?>
               </span>
               <span class="media-meta">
                 <span><i class="icon-calendar"></i> <?php the_time('Y-m-d') ?></span>

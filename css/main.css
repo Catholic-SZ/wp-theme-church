@@ -1,4 +1,4 @@
-
+﻿
 /*
 theme color:#46a546;
 background color:#ebebeb;
@@ -154,19 +154,6 @@ a:active {
   background: #46a546;
 }
 
-.main-panel div.lesson {
-  text-align: center;
-}
-
-.main-panel div.lesson ul li
-{
-  margin: 5px 0;
-  border-bottom: 1px dashed #BEBEBE;
-  overflow:hidden;
-  text-overflow:ellipsis;
-  white-space:nowrap;
-}
-
 .sns .qq {
     background-position: 0 -31px;
 }
@@ -202,36 +189,6 @@ a:active {
     opacity: 1;
 }
 
-.service-wrapper {
-    background: #FFF;
-    /*margin: 20px 10px;*/
-    text-align: center;
-    padding: 30px 20px;
-    -webkit-border-radius: 5px;
-    -webkit-background-clip: padding-box;
-    -moz-border-radius: 5px;
-    -moz-background-clip: padding;
-/*    border-radius: 5px;*/
-    background-clip: padding-box;
-    /*-webkit-box-shadow: 0 0 3px #999;*/
-    /*-moz-box-shadow: 0 0 3px #999;*/
-    /*box-shadow: 0 0 3px #999;*/
-    color: 0 0 3px #999;
-}
-
-.service-wrapper img{
-  width: 64px;
-  height: 64px;
-}
-
-.service-wrapper span{
-  display: block;
-  height: 100px;
-  overflow: hidden;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
-}
-
 /*@media (max-width: 970px) {*/
   .breadcrumb {
     margin-bottom: 0px;
@@ -254,11 +211,6 @@ a:active {
   padding-right: 5px;
 }
 
-.main-content .tab-content
-{
-  margin: 20px 0;
-}
-
 .btn {
   padding: 7px 14px;
   border-radius: 2px;
@@ -277,10 +229,6 @@ a:active {
 a.btn-default:link,
 a.btn-default:visited {
   color: #ffffff;
-}
-
-.main-pic .content {
-  text-align:center;
 }
 
 blockquote {
@@ -379,22 +327,6 @@ blockquote {
 
 .elevator .elevator-top:hover {
   background-position: 0 -320px;
-}
-
-.main-content ul.list-box li {
-  margin-bottom: 20px;
-  border: 1px solid #ebebeb;
-  padding: 10px;
-}
-
-.main-content ul.list-box li:hover{
-  border: 1px solid #46a546;
-  background: #F0F0F0;
-}
-
-.main-content ul.list-box li span {
-  font-size: 12px;
-  color:#7B7B7B;
 }
 
 hr.common-divider {
@@ -790,6 +722,12 @@ footer {
   color:#7B7B7B;
 }
 
+.widget-news .widget-content .media-summary
+{
+  margin-top: 10px;
+  line-height: 1.5em;
+}
+
 .widget-article
 {
   padding: 5px 20px;
@@ -862,7 +800,7 @@ a.btn-tag:hover,
 
 .media .media-body span.media-meta {
   position: absolute;
-  bottom: 0px;
+  bottom: 5px;
   left: 0px;
   color: #999;
 }
@@ -873,6 +811,6 @@ a.btn-tag:hover,
 
 .media .media-body a.btn {
   position: absolute;
-  bottom: 0px;
+  bottom: 5px;
   right: 0px;
 }

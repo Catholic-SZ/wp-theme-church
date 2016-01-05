@@ -243,4 +243,7 @@
     include_once('wp_bootstrap_navwalker.php');  
 
     add_theme_support( 'post-formats', array( 'aside', 'gallery' ,'video') );
+
+    //This theme styles the visual editor with editor-style.css to match the theme style.
+    add_editor_style('css/editor-style.css');
 ?>

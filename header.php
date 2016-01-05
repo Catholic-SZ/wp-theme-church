@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-CN"> 
+<html <?php language_attributes(); ?> class="no-js"> 
   <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -20,6 +20,8 @@
       } ?>
     </title>
 
+    <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/css/editor-style.css">
+
     <!-- Bootstrap -->
     <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/css/font-awesome.min.css">
@@ -27,7 +29,6 @@
       <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/font-awesome-ie7.min.css">
     <![endif]-->
     
-    <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/css/lightbox.css">
     <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/css/carousel.css">
     <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/css/main.css">
 
@@ -39,4 +40,4 @@
     <![endif]-->
 
   </head>
-  <body>
+  <body <?php body_class(); ?>>
