@@ -12,40 +12,53 @@
         </p>
       </div>
     </li>
+
+    <?php
+      $yourcat = get_category_by_slug('catholic-saints');
+      $cat_id = $yourcat->term_id;
+
+      if ( !empty($cat_id) ):
+          $cat_name = $yourcat->name;
+          $cat_links = get_category_link($cat_id);
+          $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+          $args = array(
+              'cat'           => $cat_id,
+              'showposts'     => 5,
+              'orderby'       => 'date',
+              'order'         => 'DESC'
+          );
+          $posts = query_posts($args);
+    ?>
+
     <li class="widget-container widget-sidebar boxed">
       <div class="widget-title">
-        <h4>新书推荐</h4>
+        <h4><?php echo $cat_name; ?></h4>
+        <a href="<?php echo $cat_links; ?>" class="more">更多</a>
       </div>
       <div class="widget-content">
         <div class="bs-example" data-example-id="carousel-with-captions">
           <div id="carousel-example-captions" class="carousel slide" data-ride="carousel">
             <ol class="carousel-indicators">
-              <li data-target="#carousel-example-captions" data-slide-to="0" class="active"></li>
-              <li data-target="#carousel-example-captions" data-slide-to="1"></li>
-              <li data-target="#carousel-example-captions" data-slide-to="2"></li>
+              <li data-target="#carousel-example-captions" data-slide-to="0"></li>
             </ol>
             <div class="carousel-inner" role="listbox">
-              <div class="item active">
-                <img src="img/extend/OSSROM86596_Articolo.jpg" alt="First slide image">
-                <div class="carousel-caption">
-                  <h3>First slide label</h3>
-                  <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-                </div>
-              </div>
+              <?php 
+                foreach( $posts as $post ) : setup_postdata( $post );
+              ?>
               <div class="item">
-                <img src="img/extend/AFP4605599_Articolo.jpg" alt="Second slide image">
+                <?php 
+                if ( has_post_thumbnail() ) { ?> 
+                  <?php the_post_thumbnail( array(0, 300) ); ?>
+                <?php } else {?> 
+                  <img class="img-responsive" src="<?php bloginfo('template_url'); ?>/img/default.jpg" /> 
+                <?php } ?> 
+
                 <div class="carousel-caption">
-                  <h3>Second slide label</h3>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                  <h3><?php the_title() ?></h3>
                 </div>
               </div>
-              <div class="item">
-                <img src="img/extend/OSSROM86711_Articolo.jpg" alt="Third slide image">
-                <div class="carousel-caption">
-                  <h3>Third slide label</h3>
-                  <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-                </div>
-              </div>
+              <?php endforeach; ?>
+
             </div>
             <a class="left carousel-control" href="#carousel-example-captions" role="button" data-slide="prev">
               <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
@@ -59,53 +72,87 @@
         </div><!-- /example -->
       </div>
     </li>
+    <?php endif; wp_reset_query();?>
+
+    <?php
+      $yourcat = get_category_by_slug('catholic-news');
+      $cat_id = $yourcat->term_id;
+
+      if ( !empty($cat_id) ):
+          $cat_name = $yourcat->name;
+          $cat_links = get_category_link($cat_id);
+          $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+          $args = array(
+              'cat'           => $cat_id,
+              'showposts'     => 5,
+              'orderby'       => 'date',
+              'order'         => 'DESC'
+          );
+          $posts = query_posts($args);
+    ?>
 
     <li class="widget-container widget-sidebar boxed">
       <div class="widget-title">
-        <h4>主内分享</h4>
+        <h4><?php echo $cat_name; ?></h4>
+        <a href="<?php echo $cat_links; ?>" class="more">更多</a>
       </div>
       <ul class="widget-content content-list">
+
+        <?php 
+          foreach( $posts as $post ) : setup_postdata( $post );
+        ?>
+      
         <li>
-          <a href="#">元宵节来猜圣经谜语吧！(转自天主教中文网)</a>
+          <i class="icon-caret-right"></i>
+          <a href="<?php the_permalink() ?>"><?php the_title() ?></a>
         </li>
-        <li>
-          <a href="#">将临期的意义</a>
-        </li>
-        <li>
-          <a href="#">乞丐的“原则”</a>
-        </li>
-        <li>
-          <a href="#">让耶稣作主人</a>
-        </li>
-        <li>
-          <a href="#">赞美的力量——送给参加高考、中考的孩子们和他们的家长</a>
-        </li>
+
+        <?php endforeach; ?>
+
       </ul>
     </li>
+    <?php endif; wp_reset_query();?>
+
+    <?php
+      $yourcat = get_category_by_slug('church-news');
+      $cat_id = $yourcat->term_id;
+
+      if ( !empty($cat_id) ):
+          $cat_name = $yourcat->name;
+          $cat_links = get_category_link($cat_id);
+          $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+          $args = array(
+              'cat'           => $cat_id,
+              'showposts'     => 5,
+              'orderby'       => 'date',
+              'order'         => 'DESC'
+          );
+          $posts = query_posts($args);
+    ?>
 
     <li class="widget-container widget-sidebar boxed">
       <div class="widget-title">
-        <h4>信仰生活</h4>
-        <a href="pic-list.html" class="more">更多</a>
+        <h4><?php echo $cat_name; ?></h4>
+        <a href="<?php echo $cat_links; ?>" class="more">更多</a>
       </div>
       <ul class="widget-content content-list">
+
+        <?php 
+          foreach( $posts as $post ) : setup_postdata( $post );
+        ?>
+      
         <li>
-          <a href="#">教宗推文2015年10月27日婚姻怎么保鲜，夫妇恳谈会告诉你秘诀</a>
+          <i class="icon-caret-right"></i>
+          <a href="<?php the_permalink() ?>"><?php the_title() ?></a>
         </li>
-        <li>
-          <a href="#">人大中国宗教调查报告显示：天主教在神职人员文化程度和社会服务上走在前列</a>
-        </li>
-        <li>
-          <a href="#">感谢失物主保圣安多尼</a>
-        </li>
-        <li>
-          <a href="#">孩子为什么会这样？</a>
-        </li>
-        <li>
-          <a href="#">你怎么能对别人和对我一样好呢？</a>
-        </li>
+
+        <?php endforeach; ?>
+        
       </ul>
     </li>
+    <?php endif; wp_reset_query();?>
+
+
   </ul>
 
 </aside>

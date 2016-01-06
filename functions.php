@@ -246,4 +246,31 @@
 
     //This theme styles the visual editor with editor-style.css to match the theme style.
     add_editor_style('css/editor-style.css');
+
+    add_action( 'after_setup_theme', 'default_attachment_display_settings' );
+    
+    function default_attachment_display_settings() {   
+    /*
+    image_default_align：  
+                        left  
+                        right  
+                        center  
+                        none  
+    image_default_link_type:  
+                        file  
+                        post  
+                        custom  
+                        none  
+     
+    image_default_size:  
+                        thumbnail  
+                        medium  
+                        large  
+                        full  
+     
+    */  
+      update_option( 'image_default_align', 'center' );   
+      update_option( 'image_default_link_type','file');
+      update_option( 'image_default_size', 'full' );   
+    }  
 ?>
