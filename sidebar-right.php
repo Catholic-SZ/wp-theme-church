@@ -28,6 +28,7 @@
               'order'         => 'DESC'
           );
           $posts = query_posts($args);
+          $size = sizeof($posts);
     ?>
 
     <li class="widget-container widget-sidebar boxed">
@@ -36,40 +37,48 @@
         <a href="<?php echo $cat_links; ?>" class="more">更多</a>
       </div>
       <div class="widget-content">
-        <div class="bs-example" data-example-id="carousel-with-captions">
-          <div id="carousel-example-captions" class="carousel slide" data-ride="carousel">
-            <ol class="carousel-indicators">
-              <li data-target="#carousel-example-captions" data-slide-to="0"></li>
-            </ol>
-            <div class="carousel-inner" role="listbox">
+        <div id="carousel-saints" class="carousel slide" data-ride="carousel">
+          <ol class="carousel-indicators">
+            <?php for($i=0;$i<$size;$i++) { 
+              if($i == 0){ ?>
+                <li data-target="#carousel-saints" data-slide-to="0" class="active"></li>
+            <?php  }else{ ?>
+                <li data-target="#carousel-saints" data-slide-to="<?php echo $i ?>"></li>
+            <?php  } } ?>
+          </ol>
+          <div class="carousel-inner" role="listbox">
+            <?php
+              $j = 0;
+              foreach( $posts as $post ) : setup_postdata( $post );
+              if($j == 0){ ?>
+                <div class="item active">
+              <?php  }else{ ?>
+                <div class="item">
+              <?php  } ?>
+
               <?php 
-                foreach( $posts as $post ) : setup_postdata( $post );
-              ?>
-              <div class="item">
-                <?php 
-                if ( has_post_thumbnail() ) { ?> 
-                  <?php the_post_thumbnail( array(0, 300) ); ?>
-                <?php } else {?> 
-                  <img class="img-responsive" src="<?php bloginfo('template_url'); ?>/img/default.jpg" /> 
-                <?php } ?> 
+              if ( has_post_thumbnail() ) { ?> 
+                <?php the_post_thumbnail( array(0, 300) ); ?>
+              <?php } else {?> 
+                <img class="img-responsive" src="<?php bloginfo('template_url'); ?>/img/default.jpg" /> 
+              <?php } ?> 
 
-                <div class="carousel-caption">
-                  <h3><?php the_title() ?></h3>
-                </div>
+              <div class="carousel-caption">
+                <h3><?php the_title() ?></h3>
               </div>
-              <?php endforeach; ?>
-
             </div>
-            <a class="left carousel-control" href="#carousel-example-captions" role="button" data-slide="prev">
-              <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-              <span class="sr-only">Previous</span>
-            </a>
-            <a class="right carousel-control" href="#carousel-example-captions" role="button" data-slide="next">
-              <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-              <span class="sr-only">Next</span>
-            </a>
+            <?php $j++; endforeach; ?>
+
           </div>
-        </div><!-- /example -->
+          <a class="left carousel-control" href="#carousel-saints" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="right carousel-control" href="#carousel-saints" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
       </div>
     </li>
     <?php endif; wp_reset_query();?>

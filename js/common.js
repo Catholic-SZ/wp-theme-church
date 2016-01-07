@@ -86,4 +86,6 @@
               jQuery('.navbar').removeClass("navbar-fixed-top");
           }
       });
+
+      // $('.carousel-saints').carousel();
     });

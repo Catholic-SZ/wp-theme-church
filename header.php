@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link rel="icon" href="<?php bloginfo('template_url'); ?>/favicon.ico" type="image/x-icon" />
-    <base target="_blank" />
+<!--     <base target="_blank" /> -->
     <title>
       <?php if (is_home () ) {
           bloginfo('name'); echo ' - ' ; bloginfo('description'); ;
@@ -29,7 +29,6 @@
       <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/font-awesome-ie7.min.css">
     <![endif]-->
     
-    <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/css/carousel.css">
     <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/css/main.css">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
