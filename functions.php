@@ -80,7 +80,7 @@
     add_theme_support('post-thumbnails');
 
     // set_post_thumbnail_size( 100, 100, true ); // 305 pixels wide by 380 pixels tall, set last parameter to true for hard crop mode 
-    // add_image_size( 'one', 155, 110, true ); // Set thumbnail size 
+    add_image_size( 'thumb-index', 9999, 200 ); // Set thumbnail size 
     // add_image_size( 'two', 350, 248, true ); // Set thumbnail size 
     // add_image_size( 'big', 546, 387, true ); // Set thumbnail size 
         
