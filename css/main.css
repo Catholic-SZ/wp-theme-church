@@ -716,7 +716,6 @@ footer {
   font-size: 16px;
 }
 
-.widget-container article .subtitle,
 .widget-news .widget-content .media-summary
 {
   display: block;
@@ -737,10 +736,6 @@ footer {
 .widget-article article
 {
   padding-bottom: 15px;
-}
-
-.widget-container article .subtitle{
-  text-align: center;
 }
 
 .widget-tags ul.widget-content li
@@ -814,4 +809,25 @@ a.btn-tag:hover,
   position: absolute;
   bottom: 5px;
   right: 0px;
+}
+
+#carousel-saints .carousel-inner .item img
+{
+  max-height: 300px;
+}
+
+.widget-article .sub-title
+{
+  margin-top: 20px
+}
+
+.widget-article .sub-title span
+{
+  margin-right: 10px;
+  color: #999;
+}
+
+.widget-article .sub-title span i
+{
+  margin-right: 5px;
 }

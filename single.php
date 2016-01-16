@@ -17,7 +17,12 @@
                   <?php if(have_posts()) : ?><?php while(have_posts()) : the_post(); ?>
                     
                     <h3 class="text-center"><?php the_title(); ?></h3>
-                    <span class="subtitle"><?php the_time('Y年n月j日'); ?> | <?php the_author(); ?> | <?php the_category(',');?> | <?php if(function_exists('the_views')) { the_views(); } ?> </span>
+                    <h6 class="text-center sub-title">
+                      <span><i class="icon-calendar"></i><?php the_time('Y-m-d') ?></span>
+                      <span><i class="icon-user"></i><?php the_author(); ?></span>
+                      <span><i class="icon-folder-close-alt"></i><?php the_category(',');?></span>
+                      <span><i class="icon-comments"></i> 2,678</span>
+                    </h6>
 
                     <hr class="featurette-divider">
                     <div class="widget-content"> 
@@ -27,9 +32,7 @@
                     <div class="widget-container widget-tags boxed">
                       <ul class="widget-content">
                           <li><i class="icon-tags icon-large"></i></li>
-                          <li><a href="#">教宗方济各</a></li>
-                          <li><a href="#">清晨弥撒</a></li>
-                          <li><a href="#">圣玛尔大之家</a></li>                    
+                          <?php the_tags( '<li>', '', '</li>' ); ?>       
                       </ul>
                     </div>
 
