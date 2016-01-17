@@ -560,7 +560,7 @@ section
   display: inline-block;
   *display:inline;
   *zoom:1;
-  border: none;
+  /*border: none;*/
   margin:0 auto;
   padding:0;
   overflow: hidden;

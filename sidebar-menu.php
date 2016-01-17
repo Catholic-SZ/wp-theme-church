@@ -24,11 +24,7 @@
     =========================================================-->
     <nav class="navbar navbar-default">
       <div class="navbar-inner">
-        <div class="container">
-          
-<!--           <div class="navbar-search-header">
-            <i class="icon-search" data-toggle="collapse" data-target="#navbar-search-collapse-1"></i>
-          </div> -->
+        <div class="container">          
 
           <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-navbar-collapse-1">
@@ -64,18 +60,5 @@
           </div>
         </div>
 
-<!--         <div class="container">
-          <div class="navbar-search" id="navbar-search-collapse-1">
-            <form class="navbar-form navbar-right" role="search">
-              <div class="input-group">
-                <input type="text" class="form-control search-input" placeholder="输入关键字" aria-describedby="basic-addon2">
-                <span class="input-group-addon" id="basic-addon2">
-                    <i class="icon-search"></i>
-                </span>
-              </div>
-            </form>
-          </div>
-        </div> -->
-
       </div>
-    </nav>
+    </nav
