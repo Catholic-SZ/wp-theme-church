@@ -30,50 +30,60 @@
         if ( $max_page == 1 ) return;  
         if ( empty( $paged ) ) $paged = 1;
         
-        global $paged, $wp_query;    
         if ( !$max_page ) {
             $max_page = $wp_query->max_num_pages;
-        }    
+        }
         if($max_page > 1){
+            echo '<ul class="pagination">';
+
             if(!$paged){
                 $paged = 1;
-            }    
+            }
+
             if($paged != 1){
-                echo '<a href="' . get_pagenum_link(1) . '" class="extend" title="跳转到首页">|<</a>';
+                echo '<li>';
+                echo '<a href="';
+                echo get_pagenum_link(1);
+                echo '"">首页</a>';
+                echo '</li>';
             }
             
             //echo '<a class="previous" href="'.previous_posts_link().'" title="上一页"><</a>';
-            previous_posts_link('<');
+            //previous_posts_link('<');
+
+            echo '<li class="previous">';
+            echo previous_posts_link('上一页');
+            echo '</li>';
             
-            if ( empty( $range ) ) $range = get_option('posts_per_page');
-            if($max_page > $range){    
-                if($paged < $range){
-                    for($i = 1; $i <= ($range + 1); $i++){
-                        echo '<a href="' . get_pagenum_link($i) .'"';    
-                        if($i==$paged)echo ' class="current"';echo '>$i</a>';
-                    }
-                }elseif($paged >= ($max_page - ceil(($range/2)))){    
-                    for($i = $max_page - $range; $i <= $max_page; $i++){
-                        echo '<a href="' . get_pagenum_link($i) .'"';    
-                        if($i==$paged)echo ' class="current"';echo '>$i</a>';
-                    }
-                }elseif($paged >= $range && $paged < ($max_page - ceil(($range/2)))){    
-                    for($i = ($paged - ceil($range/2)); $i <= ($paged + ceil(($range/2))); $i++){
-                        echo '<a href="' . get_pagenum_link($i) .'"';if($i==$paged) echo ' class="current"';echo '>$i</a>';
-                    }
-                }
-            } else{
-                for($i = 1; $i <= $max_page; $i++){
-                    echo '<a href="' . get_pagenum_link($i) .'"';    
-                    if($i==$paged)echo " class='current'";echo ">$i</a>";
+            for($i = 1; $i <= $max_page; $i++){
+                if($i==$paged) {
+                    echo '<li class="active"><span>';
+                    echo $i;
+                    echo '<span class="sr-only">(current)</span></span></li>';
+                } else {
+                    echo '<li><a href="';
+                    echo get_pagenum_link($i);
+                    echo '">';
+                    echo  $i;
+                    echo '</a></li>';
                 }
             }
             
-            //echo '<a class="next" href="'.next_posts_link().'" title="下一页">></a>';
-            next_posts_link('>');
+            //next_posts_link('>');
+
+            echo '<li class="next">';
+            echo next_posts_link('下一页');
+            echo '</li>';
+
             if($paged != $max_page){
-                echo '<a href="' . get_pagenum_link($max_page) . '" class="extend" title="跳转到最后一页">>|</a>';
+                echo '<li>';
+                echo '<a href="';
+                echo get_pagenum_link($max_page);
+                echo '"">末页</a>';
+                echo '</li>';
             }
+
+            echo '</ul>';
         } 
     }
 
@@ -130,7 +140,7 @@
  
             global $post;
             $home = get_bloginfo('url');
-            echo '<li><span class="glyphicon glyphicon-home" aria-hidden="true"></span><a href="' . $home . '">' . $name . '</a></li>' . $delimiter;
+            echo '<li><em class="glyphicon glyphicon-home color"></em><a href="' . $home . '">' . $name . '</a></li>' . $delimiter;
  
             if ( is_category() ) {
                 global $wp_query;

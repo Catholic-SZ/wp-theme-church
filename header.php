@@ -24,11 +24,6 @@
 
     <!-- Bootstrap -->
     <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/css/font-awesome.min.css">
-    <!--[if IE 7]>
-      <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/font-awesome-ie7.min.css">
-    <![endif]-->
-    
     <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/css/main.css">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->

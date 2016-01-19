@@ -206,11 +206,6 @@ a:active {
   content: ">";
 }
 
-.breadcrumb .glyphicon-home:before
-{
-  padding-right: 5px;
-}
-
 .btn {
   padding: 7px 14px;
   border-radius: 2px;
@@ -707,10 +702,6 @@ footer {
   overflow: hidden;
 }
 
-.widget-news .widget-title h4 i {
-  margin-right: 5px;
-}
-
 .widget-news .widget-content .media-heading
 {
   font-size: 16px;
@@ -829,5 +820,10 @@ a.btn-tag:hover,
 
 .widget-article .sub-title span i
 {
+  margin-right: 5px;
+}
+
+em.color {
+  color: #46a546;
   margin-right: 5px;
 }

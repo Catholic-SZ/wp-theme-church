@@ -16,9 +16,8 @@
                  <?php echo mb_strimwidth(strip_tags(apply_filters('the_content', $post->post_content)), 0, 140,"···");  ?>
               </span>
               <span class="media-meta">
-                <span><i class="icon-calendar"></i> <?php the_time('Y-m-d') ?></span>
-                <span><i class="icon-eye-open"></i> <?php if(function_exists('the_views')) { the_views(); } ?></span>
-                <span><i class="icon-comments"></i> 2,678</span>
+                <span><em class="glyphicon glyphicon-time color"></em><?php the_time('Y-m-d') ?></span>
+                <span><em class="glyphicon glyphicon-comment color"></em>2,678</span>
               </span>
               <a class="btn btn-default btn-sm hidden-xs" href="<?php the_permalink() ?>" role="button">阅读更多</a>
             </div>

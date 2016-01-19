@@ -18,9 +18,9 @@
                     
                     <h3 class="text-center"><?php the_title(); ?></h3>
                     <h6 class="text-center sub-title">
-                      <span><i class="icon-calendar"></i><?php the_time('Y-m-d') ?></span>
-                      <span><i class="icon-user"></i><?php the_author(); ?></span>
-                      <span><i class="icon-comments"></i> 2,678</span>
+                      <span><em class="glyphicon glyphicon-time color"></em><?php the_time('Y-m-d') ?></span>
+                      <span><em class="glyphicon glyphicon-user color"></em><?php the_author(); ?></span>
+                      <span><em class="glyphicon glyphicon-comment color"></em>2,678</span>
                     </h6>
 
                     <hr class="featurette-divider">

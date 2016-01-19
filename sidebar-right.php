@@ -112,7 +112,7 @@
         ?>
       
         <li>
-          <i class="icon-caret-right"></i>
+          <em class="glyphicon glyphicon-link color"></em>
           <a href="<?php the_permalink() ?>"><?php the_title() ?></a>
         </li>
 
@@ -151,7 +151,7 @@
         ?>
       
         <li>
-          <i class="icon-caret-right"></i>
+          <em class="glyphicon glyphicon-link color"></em>
           <a href="<?php the_permalink() ?>"><?php the_title() ?></a>
         </li>
 
