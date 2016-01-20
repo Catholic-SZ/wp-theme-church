@@ -8,9 +8,10 @@
     <section>
         <div class="container">
           <div class="row">
+              <!-- content -->
               <div class="col-xs-12 col-md-8">
                 <article class="post">
-                  <!-- content -->
+                  
                   <div class="widget-container widget-article boxed boxed-border">
 
                   <?php if(have_posts()) : ?><?php while(have_posts()) : the_post(); ?>

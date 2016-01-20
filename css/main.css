@@ -476,8 +476,8 @@ div.navbar-logo img{
 .widget-news .widget-title h4
 {
   border-bottom: 2px #46a546 solid;
-  padding-bottom: 14px;
-  _padding-bottom: 14px;
+  _padding-bottom: 12px;
+   padding-bottom: 12px;
   left: 0;
 }
 
@@ -696,6 +696,7 @@ footer {
   text-decoration: underline;
 }
 
+.widget-search,
 .widget-news {
   padding: 5px 20px;
   position: relative;
@@ -827,3 +828,5 @@ em.color {
   color: #46a546;
   margin-right: 5px;
 }
+
+strong.search-excerpt { color: red; }

@@ -1,17 +1,71 @@
 <aside>
   <ul>
-    <li class="widget-container widget-sidebar boxed">
-      <div class="widget-title">
-        <h4>下级分类</h4>
-      </div>
-      <div class="widget-content">
-        <p>
-        主日礼仪</br>
-        节日礼仪</br>
-        教堂随拍</br>
-        </p>
-      </div>
-    </li>
+    <?php 
+        if(is_category() || is_single()) {
+            
+            if(is_category()){
+                $cat = get_query_var('cat');
+                $yourcat = get_category($cat);             
+            }else if(is_single()){
+                $yourcat = get_the_category();
+                $yourcat = $yourcat[0];
+            }
+            
+            $cat_id = $yourcat->term_id;
+            
+            $cat_root = get_category_root($yourcat);
+            $root_id = $cat_root->term_id;
+            $root_name = $cat_root->name;
+            
+            $args = array(
+            'show_option_all'       => '', //不列出分类链接
+            'orderby'               => 'name', //按照分类名排序
+            'order'                 => 'ASC', //升序排列
+            'show_last_update'      => 0, //不显示分类中日志的最新时间戳
+            'style'                 => 'list',//列表显示分类
+            'show_count'            => 0, //不显示分类日志数量
+            'hide_empty'            => 1, //不显示没有日志的分类
+            'use_desc_for_title'    => 1, //显示分类描述
+            'child_of'              => $root_id,
+            'current_category'      => $cat_id,
+            'feed'                  => '', //不显示feed
+            'feed_image'            => '', //不显示feed图片
+            'exclude'               => '', //不显示该分类
+            'hierarchical'          => true, //分层次显示父/子分类
+            'title_li'              => '<div class="widget-title"><h4>'.$root_name.'</h4></div>', //用“Categories”为当前分类列表的标题
+            'echo'                  => 1, //显示(echos) 分类
+            'depth'                 => 0
+            );
+    
+            wp_list_categories( $args );
+            wp_reset_query(); 
+        }
+        
+        if(is_page()){
+            
+            $page_root = get_page_root($post);
+            $root_id = $page_root->ID;
+            $root_name = $page_root->post_title;
+            
+            $args = array(      
+            'depth'       => 0,      
+            'show_date'   => '',      
+            'date_format' => get_option('date_format'),      
+            'child_of'    => $root_id,      
+            'exclude'     => '',      
+            'title_li'    => '<div class="widget-title"><h4>'.$root_name.'</h4></div>',
+            'echo'        => 1,      
+            'authors'     => '',      
+            'sort_column' => 'menu_order, post_title',      
+            'link_before' => '',      
+            'link_after'  => '',      
+            'exclude_tree'=> '' );
+            
+            wp_list_pages( $args );
+            wp_reset_query();
+        }
+        
+    ?>
 
     <?php
       $yourcat = get_category_by_slug('catholic-saints');

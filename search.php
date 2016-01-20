@@ -1,19 +1,28 @@
 
 <?php get_header(); ?>
 
+<?php get_sidebar('menu'); ?>
+
 <?php get_sidebar('top'); ?>
 
-<div class="inner container"> 
-    <div class="column-fluid"> 
-        <div class="content">
-       
-        <?php get_template_part('content', 'search'); ?>
-            
-        </div> 
-    </div>
+    <section>
+        <div class="container">
+          	<div class="row">
+              	<div class="col-xs-12 col-md-8">
+	            	<?php get_template_part('content', 'search'); ?>
+              	</div>
+              	
+				<!-- sidebar -->
+				<div class="col-xs-12 col-md-4 visible-md-block visible-lg-block">
 
-    <?php get_sidebar('left'); ?>
-    <div class="clearfix"></div> 
-</div>
+				<?php get_sidebar('right'); ?>
+
+				</div>
+				<!--/ sidebar -->
+			</div>
+		</div>
+
+    </div>
+  </section>
 
 <?php get_footer(); ?>

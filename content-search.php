@@ -1,26 +1,32 @@
 
-<h2 class="cur-title">
-    <a title="<?php echo get_search_query(); ?>">
-    <?php echo get_search_query(); ?>
-    </a>
-</h2> 
-<ul class="postlist">
-    <?php foreach( $posts as $post ) : setup_postdata( $post ); 
+<div class="widget-container widget-search boxed boxed-border">
 
-        $title = get_the_title();
-        $keys = explode(" ", get_search_query());
-        $title = preg_replace('/('.implode('|', $keys) .')/iu',
-        '<strong class="search-excerpt">\0</strong>',
-        $title);
-        
-    ?>
-        <li>
-            <a href="<?php the_permalink() ?>" title="?php the_title(); ?>"><?php echo $title; ?></a>
-            <span><?php the_time('Y-m-d') ?></span> 
-        </li>
-   <?php endforeach;?>
-</ul> 
+    <ul class="widget-content content-list">
+        <?php if(have_posts()) : ?>
+            <?php foreach( $posts as $post ) : setup_postdata( $post ); 
 
-<div class="wpagenavi">
-    <?php par_pagenavi(''); ?>
+                $title = get_the_title();
+                $keys = explode(" ", get_search_query());
+                $title = preg_replace('/('.implode('|', $keys) .')/iu',
+                    '<strong class="search-excerpt">\0</strong>', $title);
+
+            ?>
+
+            <li>
+                <em class="glyphicon glyphicon-link color"></em>
+                <a href="<?php the_permalink() ?>"><?php echo $title; ?></a>
+            </li>
+
+            <?php endforeach; ?>
+        <?php else : ?>
+            <div class="post">
+                <h2><?php _e('Not Found'); ?></h2>
+            </div>
+        <?php endif; ?>
+
+    </ul>
+
+    <div class="wpagenavi">
+        <?php par_pagenavi(''); ?>
+    </div>
 </div>

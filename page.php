@@ -9,12 +9,13 @@
     <section>
         <div class="container">
           <div class="row">
+              <!-- content -->
               <div class="col-xs-12 col-md-8">
                 <article class="post">
-                  <!-- content -->
                   <div class="widget-container widget-article boxed boxed-border">
 
-                  <?php if(have_posts()) : ?><?php while(have_posts()) : the_post(); ?>
+                  <?php if(have_posts()) : ?>
+                  <?php while(have_posts()) : the_post(); ?>
                     
                     <h3 class="text-center"><?php the_title(); ?></h3>
                     <h6 class="text-center sub-title">
@@ -32,7 +33,7 @@
                 </article>
               </div>
               <!--/ content -->
-
+              
               <!-- sidebar -->
               <div class="col-xs-12 col-md-4 visible-md-block visible-lg-block">
 

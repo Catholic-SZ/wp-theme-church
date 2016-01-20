@@ -23,6 +23,8 @@
             </div>
         </li>
 
+        <hr class="featurette-divider">
+
     <?php endforeach;?>
 </ul>
 
