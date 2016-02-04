@@ -344,7 +344,6 @@ hr.common-divider {
 .form-input label {
   position: absolute;
   background: #fff;
-  font-size: 14px;
   top: -6px;
   left: 6px;
   padding: 0 5px;
@@ -378,7 +377,6 @@ div.navbar-logo img{
   background: #ebebeb;
   height: 40px;
   padding: 8px 0;
-  font-size: 14px;
 }
 
 .topbar-date{
@@ -448,9 +446,6 @@ div.navbar-logo img{
 {
   height: 45px;
   line-height: 30px;
-  /*margin: 0 0 15px;*/
-  font-size: 18px;
-  font-weight: normal;
   color: #3e4142;
 }
 
@@ -486,7 +481,6 @@ div.navbar-logo img{
   float: right;
   padding: 5px 0 0 0;
   color: #999;
-  font-size: 14px;
 }
 
 .boxed {
@@ -620,12 +614,10 @@ section
 
 .widget-pic .widget-content .pic-caption a{
   color: #FFF;
-  font-size: 14px;
 }
 
-.widget-pic .widget-content .pic-caption a{
-  color: #FFF;
-  font-size: 16px;
+.caption {
+  margin-top: 10px;
 }
 
 aside ul
@@ -703,21 +695,14 @@ footer {
   overflow: hidden;
 }
 
-.widget-news .widget-content .media-heading
-{
-  font-size: 16px;
-}
-
 .widget-news .widget-content .media-summary
 {
   display: block;
-  color:#7B7B7B;
 }
 
 .widget-news .widget-content .media-summary
 {
   margin-top: 10px;
-  line-height: 1.5em;
 }
 
 .widget-article
@@ -844,3 +829,8 @@ em.color {
 }
 
 strong.search-excerpt { color: red; }
+
+.font-filter {
+  /*filter: alpha(opacity=10);*/
+  opacity: 0.6;
+}

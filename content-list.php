@@ -11,7 +11,7 @@
             </div>
             <div class="media-body">
               <span class="media-heading"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></span>
-              <span class="media-summary hidden-xs">
+              <span class="media-summary font-filter hidden-xs">
                  <?php echo mb_strimwidth(strip_tags(apply_filters('the_content', $post->post_content)), 0, 140,"···");  ?>
               </span>
               <span class="media-meta">
