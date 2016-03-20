@@ -110,12 +110,7 @@
                 <div class="item">
               <?php  } ?>
 
-              <?php 
-              if ( has_post_thumbnail() ) { ?> 
-                <?php the_post_thumbnail( array(0, 300) ); ?>
-              <?php } else {?> 
-                <img class="img-responsive" src="<?php bloginfo('template_url'); ?>/img/default.jpg" /> 
-              <?php } ?> 
+              <img src="<?php post_thumbnail_src( 'thumb-pic' ); ?>" class="img-responsive" alt="<?php the_title() ?>"/>
 
               <div class="carousel-caption">
                 <h3><?php the_title() ?></h3>

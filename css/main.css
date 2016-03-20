@@ -442,6 +442,7 @@ div.navbar-logo img{
 
 /*New css*/
 
+.categories .widget-title,
 .widget-container .widget-title
 {
   height: 45px;
@@ -449,6 +450,7 @@ div.navbar-logo img{
   color: #3e4142;
 }
 
+.categories .widget-title,
 .widget-default .widget-title,
 .widget-tags .widget-title,
 .widget-pic .widget-title,
@@ -459,12 +461,14 @@ div.navbar-logo img{
   border-bottom: 2px solid #eee;
 }
 
+.categories .widget-title h4,
 .widget-container .widget-title h4
 {
   float: left;
   position: relative;
 }
 
+.categories .widget-title h4,
 .widget-default .widget-title h4,
 .widget-tags .widget-title h4,
 .widget-pic .widget-title h4,
@@ -483,6 +487,7 @@ div.navbar-logo img{
   color: #999;
 }
 
+.categories,
 .boxed {
   margin-bottom:15px;
   position: relative;
@@ -754,8 +759,8 @@ a.btn-tag:hover,
 }
 
 .media .media-left a {
-  width: 200px;
-  height: 150px;
+  width: 150px;
+  height: 100px;
 }
 
 .media .media-left a {
@@ -775,8 +780,8 @@ a.btn-tag:hover,
 }
 
 .widget-pic .media .media-left a {
-  width: 100px;
-  height: 75px;
+  width: 150px;
+  height: 100px;
 }
 
 .widget-pic .media .media-body .media-heading a {
