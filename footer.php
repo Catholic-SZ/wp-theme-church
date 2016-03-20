@@ -79,6 +79,9 @@
         <div class="row">
           <div class="col-xs-12">
             <p class="w3-link">Copyright © 2015 Catholic Assist. All Rights Reserved. 载入时间:<?php echo get_num_queries(); ?> 毫秒</p>
+            <p>
+              网站开发设计：Haber <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=542143331&site=qq&menu=yes"><img border="0" src="http://wpa.qq.com/pa?p=2:542143331:51" alt="点击这里给我发消息" title="点击这里给我发消息"/></a>
+            </p>
           </div>
         </div>
       </div>
