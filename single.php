@@ -21,7 +21,8 @@
                       <span><em class="glyphicon glyphicon-time color"></em><?php the_time('Y-m-d') ?></span>
                       <span><em class="glyphicon glyphicon-user color"></em><?php the_author(); ?></span>
                       <span><em class="glyphicon glyphicon-folder-open color"></em></i><?php the_category(',');?></span>
-                      <span><em class="glyphicon glyphicon-comment color"></em>2,678</span>
+                      <?php if ( comments_open() ) echo '<span><em class="glyphicon glyphicon-comment color"></em> <a href="'.get_comments_link().'">'.get_comments_number('去', '1', '%').'</a></span>'; ?>
+                      <?php edit_post_link('[编辑]'); ?>
                     </h6>
 
                     <hr class="featurette-divider">

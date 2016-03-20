@@ -282,5 +282,46 @@
       update_option( 'image_default_align', 'center' );   
       update_option( 'image_default_link_type','file');
       update_option( 'image_default_size', 'full' );   
-    }  
+    } 
+
+    function alter_the_query( $request ) {
+        $dummy_query = new WP_Query();  // the query isn't run if we don't pass any query vars
+        $dummy_query->parse_query( $request );
+
+        // this is the actual manipulation; do whatever you need here
+        if ( $dummy_query->is_tag())
+            $request['post_type'] = array('post','product');
+
+        return $request;
+    }
+    add_filter( 'request', 'alter_the_query' );
+
+
+    if ( function_exists('add_theme_support') )add_theme_support('post-thumbnails');
+ 
+    //输出缩略图地址
+    function post_thumbnail_src(){
+        global $post;
+        if( $values = get_post_custom_values("thumb") ) {   //输出自定义域图片地址
+            $values = get_post_custom_values("thumb");
+            $post_thumbnail_src = $values [0];
+        } elseif( has_post_thumbnail() ){    //如果有特色缩略图，则输出缩略图地址
+            $thumbnail_src = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID),'full');
+            $post_thumbnail_src = $thumbnail_src [0];
+        } else {
+            $post_thumbnail_src = '';
+            ob_start();
+            ob_end_clean();
+            $output = preg_match_all('/<img.+src=[\'"]([^\'"]+)[\'"].*>/i', $post->post_content, $matches);
+            $post_thumbnail_src = $matches [1] [0];   //获取该图片 src
+            if(empty($post_thumbnail_src)){ //如果日志中没有图片，则显示随机图片
+                $random = mt_rand(1, 10);
+                echo get_bloginfo('template_url');
+                echo '/img/pic/'.$random.'.jpg';
+                //如果日志中没有图片，则显示默认图片
+                //echo '/img/thumbnail.png';
+            }
+        };
+        echo $post_thumbnail_src;
+    }
 ?>
