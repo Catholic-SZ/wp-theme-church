@@ -268,41 +268,33 @@
     if ( function_exists('add_theme_support') )add_theme_support('post-thumbnails');
 
     // set_post_thumbnail_size( 100, 100, true ); // 305 pixels wide by 380 pixels tall, set last parameter to true for hard crop mode 
-    add_image_size( 'thumb-index', 400, 267, true ); // Set thumbnail size 
-    add_image_size( 'thumb-list', 150, 100, true ); // Set thumbnail size 
-    add_image_size( 'thumb-pic', 250, 167, true ); // Set thumbnail size 
- 
-    function post_thumbnail_src($size){
+    //add_image_size( 'thumb-index', 400, 267, true ); // Set thumbnail size 
+    //add_image_size( 'thumb-list', 150, 100, true ); // Set thumbnail size 
+    //add_image_size( 'thumb-pic', 250, 167, true ); // Set thumbnail size 
+
+    //输出缩略图地址
+    function post_thumbnail_src(){
         global $post;
-        if( has_post_thumbnail() ){
-            switch($size){
-                case 'thumb-index':
-                    $thumbnail_src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'thumb-index');
-                    $post_thumbnail_src = $thumbnail_src [0];
-                    break;
-                case 'thumb-list':
-                    $thumbnail_src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'thumb-list');
-                    $post_thumbnail_src = $thumbnail_src [0];
-                    break;
-                case 'thumb-pic':
-                    $thumbnail_src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'thumb-pic');
-                    $post_thumbnail_src = $thumbnail_src [0];
-                    break;
-                default:
-                    break;
-            }
+        if( $values = get_post_custom_values("thumb") ) {   //输出自定义域图片地址
+            $values = get_post_custom_values("thumb");
+            $post_thumbnail_src = $values [0];
+        } elseif( has_post_thumbnail() ){    //如果有特色缩略图，则输出缩略图地址
+            $thumbnail_src = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID),'full');
+            $post_thumbnail_src = $thumbnail_src [0];
         } else {
-            $post_thumbnail_src = ''; //如果没有缩略图获取随机图片
+            $post_thumbnail_src = '';
             ob_start();
             ob_end_clean();
             $output = preg_match_all('/<img.+src=[\'"]([^\'"]+)[\'"].*>/i', $post->post_content, $matches);
-            $post_thumbnail_src = $matches [1] [0];
-            if(empty($post_thumbnail_src)){
+            $post_thumbnail_src = $matches [1] [0];   //获取该图片 src
+            if(empty($post_thumbnail_src)){ //如果日志中没有图片，则显示随机图片
                 $random = mt_rand(1, 10);
-                echo '<?php bloginfo("template_url"); ?>'.'/img/pic/'.$random.'.jpg';
+                echo get_bloginfo('template_url');
+                echo '/img/pic/'.$random.'.jpg';
+                //如果日志中没有图片，则显示默认图片
+                //echo '/img/thumbnail.png';
             }
-        }
-
+        };
         echo $post_thumbnail_src;
     }
 
