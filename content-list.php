@@ -5,7 +5,7 @@
         <li class="media">
             <div class="media-left">
               <a href="<?php the_permalink() ?>">
-                <?php the_post_thumbnail( 'thumb-list' ); ?>
+                <img src="<?php post_thumbnail_src( 'thumb-list' ); ?>" class="img-thumbnail" alt="<?php the_title() ?>"/>
               </a>
                 
             </div>

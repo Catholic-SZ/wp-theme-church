@@ -487,6 +487,11 @@ div.navbar-logo img{
   color: #999;
 }
 
+.widget-default
+{
+  margin-bottom:15px;
+}
+
 .categories,
 .boxed {
   margin-bottom:15px;
@@ -758,9 +763,13 @@ a.btn-tag:hover,
   height: auto;
 }
 
+.media {
+  margin-top: 5px;
+}
+
 .media .media-left a {
   width: 150px;
-  height: 100px;
+  height: 103px;
 }
 
 .media .media-left a {
@@ -781,7 +790,7 @@ a.btn-tag:hover,
 
 .widget-pic .media .media-left a {
   width: 150px;
-  height: 100px;
+  height: 103px;
 }
 
 .widget-pic .media .media-body .media-heading a {
