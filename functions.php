@@ -24,6 +24,7 @@
     ));
 
     include('widgets/index.php');
+    include("bulletin-post-types.php");
 
     function par_pagenavi($range){   
         if ( is_singular() ) return;  
