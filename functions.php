@@ -23,6 +23,8 @@
             'after_title' => '</h3>',
     ));
 
+    include('widgets/index.php');
+
     function par_pagenavi($range){   
         if ( is_singular() ) return;  
         global $wp_query, $paged;  
