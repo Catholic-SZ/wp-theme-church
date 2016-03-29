@@ -554,6 +554,11 @@ section
   margin-bottom: 15px;
 }
 
+.content-bulletin img {
+  width: 100%;
+  height: auto;
+}
+
 .widget-pic .widget-content .pic-box {
   position: relative;
   display: inline-block;
