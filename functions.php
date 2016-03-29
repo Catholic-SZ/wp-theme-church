@@ -142,11 +142,16 @@
             } elseif ( is_single() ) {
                 $cat = get_the_category(); 
                 $cat = $cat[0];
-                echo '<li>'.get_category_parents($cat, TRUE, '</li><li>');
+                if (get_post_type() == "bulletin") {
+                    echo '<li>堂区公告</li>';
+                } else {
+                    echo '<li>'.get_category_parents($cat, TRUE, '</li><li>');
+                }
+
                 // echo '<li><a href="'.get_category_link( $cat ).'">'.$cat->name.'</a></li>' . $delimiter;
-                echo $currentBefore;
-                the_title();
-                echo $currentAfter;
+                //echo $currentBefore;
+                //the_title();
+                //echo $currentAfter;
          
             } elseif ( is_page() && !$post->post_parent ) {
                 echo $currentBefore;

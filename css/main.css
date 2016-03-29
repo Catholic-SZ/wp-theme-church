@@ -554,6 +554,14 @@ section
   margin-bottom: 15px;
 }
 
+.content-bulletin {
+  max-height: 300px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  margin: 0 auto;
+  width: 100%;
+}
+
 .content-bulletin img {
   width: 100%;
   height: auto;
