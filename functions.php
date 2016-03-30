@@ -146,6 +146,7 @@
                     echo '<li>堂区公告</li>';
                 } else {
                     echo '<li>'.get_category_parents($cat, TRUE, '</li><li>');
+                    echo '正文</li>';
                 }
 
                 // echo '<li><a href="'.get_category_link( $cat ).'">'.$cat->name.'</a></li>' . $delimiter;
@@ -305,6 +306,48 @@
         };
         echo $post_thumbnail_src;
     }
+
+    //时间显示方式‘xx以前’
+    function time_ago( $type = 'commennt', $day = 7 ) {
+      $d = $type == 'post' ? 'get_post_time' : 'get_comment_time';
+      if (time() - $d('U') > 60*60*24*$day) return;
+      echo ' (', human_time_diff($d('U'), strtotime(current_time('mysql', 0))), '前)';
+    }
+
+    //评论样式
+    function deel_comment_list($comment, $args, $depth) {
+      echo '<li '; comment_class(); echo ' id="comment-'.get_comment_ID().'">';
+
+      //头像
+      echo '<div class="c-avatar">';
+      //echo str_replace(' src=', ' data-original=', get_avatar( $comment->comment_author_email, $size = '54' , deel_avatar_default())); 
+      //内容
+      echo '<div class="c-main" id="div-comment-'.get_comment_ID().'">';
+        echo str_replace(' src=', ' data-original=', convert_smilies(get_comment_text()));
+        if ($comment->comment_approved == '0'){
+          echo '<span class="c-approved">您的评论正在排队审核中，请稍后！</span><br />';
+        }
+        //信息
+        echo '<div class="c-meta">';
+            echo '<span class="c-author">'.get_comment_author_link().'</span>';
+            echo get_comment_time('Y-m-d H:i '); echo time_ago(); 
+            if ($comment->comment_approved !== '0'){ 
+                echo comment_reply_link( array_merge( $args, array('add_below' => 'div-comment', 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ); 
+            echo edit_comment_link(__('(编辑)'),' - ','');
+          } 
+        echo '</div>';
+      echo '</div></div>';
+    }
+
+    //remove google fonts
+    if (!function_exists('remove_wp_open_sans')) :
+        function remove_wp_open_sans() {
+            wp_deregister_style( 'open-sans' );
+            wp_register_style( 'open-sans', false );
+        }
+         add_action('admin_enqueue_scripts', 'remove_wp_open_sans');
+         add_action('login_init', 'remove_wp_open_sans');
+    endif;
 
 
 ?>

@@ -41,7 +41,14 @@
                 </article>
                 上一篇：<?php previous_post_link(); ?><br/>
                 下一篇：<?php next_post_link(); ?>
-                <?php comment_form(); ?>
+
+                <?php
+                // If comments are open or we have at least one comment, load up the comment template.
+                if ( comments_open() || get_comments_number() ) :
+                  comments_template();
+                endif;
+                ?>
+                
               </div>
               <!--/ content -->
 
