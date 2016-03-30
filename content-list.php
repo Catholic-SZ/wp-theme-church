@@ -16,7 +16,11 @@
               </span>
               <span class="media-meta">
                 <span><em class="glyphicon glyphicon-time color"></em><?php the_time('Y-m-d') ?></span>
-                <span><em class="glyphicon glyphicon-comment color"></em>2,678</span>
+                <span><em class="glyphicon glyphicon-comment color"></em>
+                  <a href="<?php get_comments_link() ?>">
+                    <?php echo get_comments_number('0', '1', '%'); ?>
+                  </a>
+                </span>
               </span>
               <a class="btn btn-default btn-sm hidden-xs" href="<?php the_permalink() ?>" role="button">阅读更多</a>
             </div>

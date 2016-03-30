@@ -20,7 +20,7 @@
       } ?>
     </title>
 
-    <!-- <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/css/editor-style.css"> -->
+    <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/css/editor-style.css">
 
     <!-- Bootstrap -->
     <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/css/bootstrap.min.css">

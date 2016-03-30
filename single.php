@@ -21,7 +21,7 @@
                       <span><em class="glyphicon glyphicon-time color"></em><?php the_time('Y-m-d') ?></span>
                       <span><em class="glyphicon glyphicon-user color"></em><?php the_author(); ?></span>
                       <span><em class="glyphicon glyphicon-folder-open color"></em></i><?php the_category(',');?></span>
-                      <?php if ( comments_open() ) echo '<span><em class="glyphicon glyphicon-comment color"></em> <a href="'.get_comments_link().'">'.get_comments_number('去', '1', '%').'</a></span>'; ?>
+                      <?php if ( comments_open() ) echo '<span><em class="glyphicon glyphicon-comment color"></em> <a href="'.get_comments_link().'">'.get_comments_number('0', '1', '%').'</a></span>'; ?>
                       <?php edit_post_link('[编辑]'); ?>
                     </h6>
 
@@ -41,6 +41,7 @@
                 </article>
                 上一篇：<?php previous_post_link(); ?><br/>
                 下一篇：<?php next_post_link(); ?>
+                <?php comment_form(); ?>
               </div>
               <!--/ content -->
 
