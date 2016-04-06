@@ -7,13 +7,7 @@
               将临期
             </div>
             <div class="topbar-social">
-              <span><a href="" title="我们需要你的支持">捐助我们</a></span>
-              <a class="s_weixin" title="官方微信">官方微信</a>
-              <div class="weixin" style="display: none;">
-                <a href="img/qrcode.jpg">
-                <img class="qrcode img-responsive" src="<?php bloginfo('template_url'); ?>/img/qrcode.jpg" alt="微信公众号"></a>
-              </div>
-              <a class="s_tsina" title="新浪微博" href="http://weibo.com/szsadn" target="_blank">新浪微博</a>
+              <wb:follow-button uid="5066044867" type="red_2" width="136" height="24" ></wb:follow-button>
             </div>
           </div>
         </div>
@@ -35,6 +29,7 @@
             </button>
             <a class="navbar-brand" href="<?php bloginfo('url'); ?>">
               <img src="<?php bloginfo('template_url'); ?>/img/logo.png" class="img-responsive" alt="天主教深圳圣安多尼堂"/>
+
             </a>
           </div>
           
