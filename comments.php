@@ -30,9 +30,6 @@ $closeTimer = (strtotime(date('Y-m-d G:i:s'))-strtotime(get_the_time('Y-m-d G:i:
 	<form action="<?php echo get_option('siteurl'); ?>/wp-comments-post.php" method="post" id="commentform">
 		
 		<div class="comt-title">
-			<div class="comt-avatar pull-left">
-
-			</div>
 			<div class="comt-author pull-left">
 			<?php 
 				if ( is_user_logged_in() ) {
@@ -51,11 +48,10 @@ $closeTimer = (strtotime(date('Y-m-d G:i:s'))-strtotime(get_the_time('Y-m-d G:i:
 		
 		<div class="comt">
 			<div class="comt-box">
-				<textarea placeholder="写点什么..." class="input-block-level comt-area" name="comment" id="comment" cols="100%" rows="3" tabindex="1" onkeydown="if(event.ctrlKey&amp;&amp;event.keyCode==13){document.getElementById('submit').click();return false};"></textarea>
+				<textarea placeholder="写点什么..." class="input-block-level comt-area" name="comment" id="comment" style="width:100%" rows="3" tabindex="1" onkeydown="if(event.ctrlKey&amp;&amp;event.keyCode==13){document.getElementById('submit').click();return false};"></textarea>
 				<div class="comt-ctrl">
-					<button class="btn btn-primary pull-right" type="submit" name="submit" id="submit" tabindex="5"><i class="fa fa-check-square-o"></i> 提交评论</button>
+					<button class="btn btn-default pull-right" type="submit" name="submit" id="submit" tabindex="5"><i class="fa fa-check-square-o"></i> 提交评论</button>
 					<div class="comt-tips pull-right"><?php comment_id_fields(); do_action('comment_form', $post->ID); ?></div>
-					<span data-type="comment-insert-smilie" class="muted comt-smilie"><i class="fa fa-smile-o"></i> 表情</span>
 					
 				</div>
 			</div>
@@ -84,7 +80,7 @@ if ( have_comments() ) {
 ?>
 <div id="postcomments">
 	<div id="comments">
-		<i class="fa fa-comments-o"></i> <b><?php echo ' ('.$count_t.')'; ?></b>个小伙伴在吐槽
+		<i class="fa fa-comments-o"></i> <b><?php echo ' ('.$count_t.')'; ?></b>条评论
 	</div>
 	<ol class="commentlist">
 		<?php wp_list_comments('type=comment&callback=deel_comment_list') ?>

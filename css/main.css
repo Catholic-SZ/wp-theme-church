@@ -876,16 +876,19 @@ strong.search-excerpt { color: red; }
 
 
 #postcomments{position:relative;background-color:#fff}
-#respond{/* position:relative; */background-color:#fff;}
+#respond{/* position:relative; */
+  background-color:#fff;
+  margin: 15px 0px;
+}
+
 #respond .base-tit{display:none}
 .comment #respond{margin:10px 0 0;padding:0;border:1px solid #ddd}
 .commentnew{background-color:#DFF0D8}
 .commentnew .c-main{margin-bottom:5px}
-.comment{padding:12px 0 10px 0}
-.commentlist{padding:12px 20px 0px 20px}
+.comment{padding:10px 0 5px 0}
 .c-avatar .avatar{position: absolute;width:54px;height:54px; border-radius: 2px;webkit-transition:all 300ms ease-in-out;-o-transition:all 300ms ease-in-out; -moz-transition: all 300ms ease-in-out;-ms-transition: all 300ms ease-in-out;-webkit-transition: all 0.3s ease-out;}
 
-.c-main{padding:10px 15px;
+.c-main{padding:5px 15px;
   line-height:25px;
   margin-top:-2px;
   /*margin-left: 72px; */
@@ -901,17 +904,16 @@ strong.search-excerpt { color: red; }
 .comment:hover .c-floor{color:#999999}
 .c-approved{border-radius:2px;background-color:#fbfbfb;border:1px solid #ccc;color:#999;display:inline-block;padding:1px 5px;margin-top:4px}
 .wp-smiley{margin: 0 !important;display: inline-block!important;}
-#comments{font-size:15px;padding:12px 20px;line-height:14px;color:#5fbaac;font-weight:normal;border-bottom:1px solid #DBECE8}
+#comments{font-size:15px;padding:10px 5px;line-height:14px;color:#5fbaac;font-weight:normal;border-bottom:1px solid #DBECE8}
 #comments b{font-weight:normal;font-size:13px}
 #commentform{margin-bottom:0}
-.comt-title{overflow:hidden;padding:12px 20px;background-color:#f7f7f7;}
+.comt-title{overflow:hidden;padding:5px 10px;background-color:#f7f7f7;}
 .comt-count{float:right;color:#999;margin-bottom:5px}
-.comt{padding:20px 20px 5px 20px;position:relative}
+.comt{margin:15px 0px;position:relative}
 .comt-avatar{height:28px !important;width:28px}
 .comt-avatar img{border-radius:2px;opacity:0.9;height:28px !important;width:28px !important;}
-.comt-author{margin:5px 10px 0 10px;font-size:16px;color:#666}
+.comt-author{font-size:16px;color:#666}
 .comt-author span{color:#bbb;margin-left:10px}
-.comt-box{overflow: hidden;}
 .comt-area{margin-bottom: 5px;}
 .comt-ctrl{position:relative;overflow: hidden;}
 .comt-addsmilies,.comt-addcode{float:left;color:#999;padding:0 10px 0 10px}
