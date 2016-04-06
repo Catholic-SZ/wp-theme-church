@@ -3,8 +3,9 @@
         <div class="row">
           <div class="col-xs-12">
             <div class="topbar-date">
-              <span class="hidden-xs">2015年12月1日</span>
-              将临期
+              <span class="hidden-xs"><?php echo date("Y年m月d日");?></span>
+              <!--
+              将临期-->
             </div>
             <div class="topbar-social">
               <wb:follow-button uid="5066044867" type="red_2" width="136" height="24" ></wb:follow-button>

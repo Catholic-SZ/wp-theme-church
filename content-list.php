@@ -15,7 +15,7 @@
                  <?php echo mb_strimwidth(strip_tags(apply_filters('the_content', $post->post_content)), 0, 140,"···");  ?>
               </span>
               <span class="media-meta">
-                <span><em class="glyphicon glyphicon-time color"></em><?php the_time('Y-m-d') ?></span>
+                <span><em class="glyphicon glyphicon-time color"></em><?php the_time('Y-m-d H:i'); ?></span>
                 <span><em class="glyphicon glyphicon-comment color"></em>
                   <a href="<?php get_comments_link() ?>">
                     <?php echo get_comments_number('0', '1', '%'); ?>
