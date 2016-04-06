@@ -5,7 +5,7 @@
         <li class="media">
             <div class="media-left">
               <a href="<?php the_permalink() ?>">
-                <img class="img-responsive img-thumbnail" src="<?php echo get_bloginfo("template_url") ?>/timthumb.php?src=<?php echo post_thumbnail_src(); ?>&h=100&w=150&q=90&zc=1&ct=1" alt="<?php the_title(); ?>" />
+                <img class="img-responsive img-thumbnail" src="<?php echo get_bloginfo("template_url") ?>/timthumb.php?src=<?php echo post_thumbnail_src(); ?>&h=100&w=150&q=90&zc=1&ct=1&a=t" alt="<?php the_title(); ?>" />
               </a>
                 
             </div>

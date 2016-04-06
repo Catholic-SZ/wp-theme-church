@@ -110,7 +110,7 @@
                 <div class="item">
               <?php  } ?>
 
-              <img class="img-responsive" src="<?php echo get_bloginfo("template_url") ?>/timthumb.php?src=<?php echo post_thumbnail_src(); ?>&h=300&w=340&q=90&zc=1&ct=1" alt="<?php the_title(); ?>" />
+              <img class="img-responsive" src="<?php echo get_bloginfo("template_url") ?>/timthumb.php?src=<?php echo post_thumbnail_src(); ?>&h=300&w=340&q=90&zc=1&ct=1&a=t" alt="<?php the_title(); ?>" />
 
               <div class="carousel-caption">
                 <h3><?php the_title() ?></h3>
