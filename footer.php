@@ -39,10 +39,10 @@
               </div>
               <div class="widget-content">
                 <ul>
-                  <li><a href="#">思高版圣经</a></li>
-                  <li><a href="#">天主教教理</a></li>
-                  <li><a href="#">天主教法典</a></li>
-                  <li><a href="#">常用经文</a></li>
+                  <li><a href="http://www.cathassist.org/bible/bible/">思高版圣经</a></li>
+                  <li><a href="http://www.cathassist.org/catechism/content/">天主教教理</a></li>
+                  <li><a href="http://www.cathassist.org/codex/content/">天主教法典</a></li>
+                  <li><a href="http://www.cathassist.org/prayer/">常用经文</a></li>
                 </ul>
               </div>
             </div>
