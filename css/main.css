@@ -1,7 +1,7 @@
 ﻿
 /*
 theme color:#46a546;
-background color:#ebebeb;
+background color:#F5F5F5;
 content background color:#ffffff;
 
 */
@@ -374,7 +374,7 @@ div.navbar-logo img{
 }
 
 .topbar{
-  background: #ebebeb;
+  background: #F5F5F5;
   height: 40px;
   padding: 8px 0;
 }
@@ -822,6 +822,7 @@ a.btn-tag:hover,
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  color: #57bae8;
 }
 
 .media .media-body span.media-meta {
