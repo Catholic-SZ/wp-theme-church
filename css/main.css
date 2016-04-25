@@ -611,6 +611,7 @@ section
 /*  min-height: 100px;*/
   margin-left: auto;
   margin-right: auto;
+  width: 100%;
 }
 
 .widget-pic .widget-content img:hover {

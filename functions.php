@@ -349,5 +349,22 @@
          add_action('login_init', 'remove_wp_open_sans');
     endif;
 
+	//官方Gravatar头像调用ssl头像链接
+	function get_ssl_avatar($avatar) {
+	 $avatar = preg_replace('/.*\/avatar\/(.*)\?s=([\d]+)&.*/','<img src="https://secure.gravatar.com/avatar/$1?s=$2" class="avatar avatar-$2" height="$2" width="$2">',$avatar);
+	 return $avatar;
+	}
+	add_filter('get_avatar', 'get_ssl_avatar');
+
+	function new_filename($filename) {
+		$info = pathinfo($filename);
+		$ext = empty($info['extension']) ? '' : '.' . $info['extension'];
+		$name = basename($filename, $ext);
+		if ( !preg_match('/^[0-9a-zA-Z_-]+$/', $name) )
+		$name = substr(md5($name), 0, 15);
+		return $name . $ext;
+	}
+	
+	add_filter('sanitize_file_name', 'new_filename', 10);
 
 ?>
