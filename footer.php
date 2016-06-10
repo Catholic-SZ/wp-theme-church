@@ -95,7 +95,6 @@
           </div>
         </a> -->
         <a class="elevator-msg" href="#"></a>
-        <a class="elevator-app" href="#"></a>
         <a class="elevator-top" href="javascript:;" style="display:none"></a>
     </div>
 
