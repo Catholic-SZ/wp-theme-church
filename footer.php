@@ -81,7 +81,10 @@
           <div class="col-xs-12">
             <p class="w3-link">© 2010-<?php echo date("Y");?> St.Anthony's Catholic Church of Shenzhen. All Rights Reserved. 载入时间:<?php echo get_num_queries(); ?> 毫秒</p>
             <p>
-              基于 WordPress · 开发运维 Haber <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=542143331&site=qq&menu=yes"><img border="0" src="http://wpa.qq.com/pa?p=2:542143331:51" alt="点击这里给我发消息" title="点击这里给我发消息"/></a>
+				基于 WordPress · 开发运维 Haber <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=542143331&site=qq&menu=yes"><img border="0" src="http://wpa.qq.com/pa?p=2:542143331:51" alt="点击这里给我发消息" title="点击这里给我发消息"/></a>
+				<script type="text/javascript">
+					var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1259135984'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s11.cnzz.com/z_stat.php%3Fid%3D1259135984%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));
+				</script>
             </p>
           </div>
         </div>
