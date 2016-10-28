@@ -79,7 +79,8 @@
 
         <div class="row">
           <div class="col-xs-12">
-            <p class="w3-link">© 2010-<?php echo date("Y");?> St.Anthony's Catholic Church of Shenzhen. All Rights Reserved. 载入时间:<?php echo get_num_queries(); ?> 毫秒</p>
+            <p class="w3-link">© 2010-<?php echo date("Y");?> St.Anthony's Catholic Church of Shenzhen. 
+			All Rights Reserved. <?php echo get_option( 'zh_cn_l10n_icp_num' );?> 载入时间:<?php echo get_num_queries(); ?> 毫秒</p>
             <p>
 				基于 WordPress · 开发运维 Haber <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=542143331&site=qq&menu=yes"><img border="0" src="http://wpa.qq.com/pa?p=2:542143331:51" alt="点击这里给我发消息" title="点击这里给我发消息"/></a>
 				<script type="text/javascript">
