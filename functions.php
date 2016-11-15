@@ -313,6 +313,17 @@
       if (time() - $d('U') > 60*60*24*$day) return;
       echo ' (', human_time_diff($d('U'), strtotime(current_time('mysql', 0))), '前)';
     }
+	
+	//禁用页面的评论功能
+	function disable_page_comments( $posts ) {
+		if ( is_page()) {
+			$posts[0]->comment_status = 'disabled';
+			$posts[0]->ping_status = 'disabled';
+		}
+		return $posts;
+	}
+	
+	add_filter( 'the_posts', 'disable_page_comments' );
 
     //评论样式
     function deel_comment_list($comment, $args, $depth) {
