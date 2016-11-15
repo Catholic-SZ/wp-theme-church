@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
 	<meta name="Author" content="Haber">
 	<meta name="Copright" content="天主教深圳圣安多尼堂">
-	<meta name="Keywords" content="深圳教堂,深圳天主教堂,天主教堂,深圳教会">
+	<meta name="Keywords" content="深圳教堂,深圳天主教堂,天主教堂,深圳教会,深圳">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link rel="icon" href="<?php bloginfo('template_url'); ?>/favicon.ico" type="image/x-icon" />
